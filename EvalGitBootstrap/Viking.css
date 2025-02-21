@@ -1,0 +1,151 @@
+[data-theme="light"] {
+	--bg-color: #ececec;
+	--text-color: #212121;
+}
+
+/* 🌚 Style sombre */
+[data-theme="dark"] {
+	--bg-color: #212121;
+	--text-color: #ececec;
+}
+
+html {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}
+
+footer{
+	background-color: #f8f9fa; /* Couleur de fond clair */
+	color: #333; /* Couleur du texte */
+	text-align: center;
+	padding: 20px;
+	margin-top: 28%;
+}
+
+/* Adaptation au thème sombre */
+body.dark-mode footer {
+    background-color: #212121; /* Fond sombre */
+    color: rgb(255, 255, 255); /* Texte blanc */
+}
+.navbar {
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(33, 33, 33, 0.9); /* Fond légèrement transparent */
+}
+
+body.dark-mode .button-container label {
+    background-color: #333; /* Fond plus foncé */
+    color: white; /* Texte en blanc */
+    border-color: #555; /* Bordure assombrie */
+}
+
+body.dark-mode .button-container label:hover {
+    background-color: #444; /* Effet de survol un peu plus clair */
+    border-color: #777; /* Bordure plus visible */
+}
+
+body.dark-mode .button-container input[type="radio"] {
+    border-color: white;
+}
+
+body.dark-mode .button-container input[type="radio"]:checked {
+    background-color: white;
+    border-color: white;
+}
+
+
+/* Assure que la page prend toute la hauteur */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer bien en bas */
+footer {
+    background-color: #f8f9fa; /* Couleur de fond clair */
+    color: #333; /* Couleur du texte */
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin-top: 10%;
+}
+.persofav footer{
+    margin-top: 50%;
+}
+.loreetsyno footer{
+    margin-top: 15%;
+}
+
+/* Zone de texte avec style similaire */
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    background-color: white; /* Fond blanc pour le mode clair */
+    color: black; /* Texte noir pour le mode clair */
+    padding: 20px;
+    border-radius: 12px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
+    transition: background-color 0.3s, color 0.3s; /* Transition pour le thème sombre */
+}
+
+/* Pour le mode sombre */
+body.dark-mode .text-container {
+    background-color: #333; /* Fond sombre */
+    color: #fff; /* Texte blanc en mode sombre */
+}
+
+.text-avis {
+    width: 50%;
+    max-width: 700px; /* Évite un bloc trop large sur grands écrans */
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    color: black;
+    text-align: center;
+}
+
+/* Mode sombre */
+body.dark-mode .text-avis {
+    background-color: #333;
+    color: white;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+    .text-avis {
+        width: 70%; /* Réduit un peu la largeur en tablette */
+    }
+}
+
+@media (max-width: 768px) {
+    .text-avis {
+        width: 90%; /* Prend presque toute la largeur sur mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
